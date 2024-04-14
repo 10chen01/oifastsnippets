@@ -1,0 +1,17 @@
+{
+    "oi-mainfunc":{
+        "prefix": ["main", "oi-main"],
+        "body": [
+            "if __name__ == '__main__':",
+            "\t$1"
+        ],
+        "description": "main function of python"
+    },
+    "oi-sort":{
+        "prefix": ["sort", "oi-sort"],
+        "body": [
+            "${1:list}.sort()"
+        ],
+        "description": "sort a list"
+    }
+}

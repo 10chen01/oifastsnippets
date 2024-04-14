@@ -1,0 +1,92 @@
+{
+    "oi-mainfunc":{
+        "prefix": ["main", "oi-main"],
+        "body": [
+            "#include <${1:bits/stdc++.h}>",
+            "using namespace std;",
+            "${2|int,signed|} main(){",
+            "\t$3",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "main function of C++"
+    },
+    "oi-sort-stl":{
+        "prefix": ["sort", "oi-sort", "oi-sort-stl"],
+        "body": [
+            "sort(begin(${1:vec}), end(${1:vec}), [${2|&,=|}](${3:Type} a,${3:Type} b){",
+            "\treturn ${4:a<b};",
+            "});"
+        ],
+        "description": "sort array from stl"
+    },
+    "oi-fast-iostream":{
+        "prefix": ["fast-io", "oi-fast-io", "oi-fast-iostream"],
+        "body": [
+            "ios::sync_with_stdio(false);",
+            "${1}.tie(0);",
+            "${2}.tie(0);"
+        ],
+        "description": "fast iostream(break sync with stdio)"
+    },
+    "oi-freopen":{
+        "prefix": ["oi-freopen", "oi-fileio-freopen"],
+        "body": [
+            "freopen(\"${1:input}.in\", \"r\", stdin);",
+            "freopen(\"${2:output}.out\", \"w\", stdout);"
+        ],
+        "description": "freopen input and output file"
+    },
+    // "oi-fstream":{
+    //     "prefix": ["oi-fstream", "oi-fileio-fstream", "fin", "fout"],
+    //     "body": [
+    //         "ifstream fin(\"${1:input}.in\");",
+    //         "ofstream fout(\"${2:output}.out\");"
+    //     ],
+    //     "description": "fstream input and output file"
+    // },
+    "oi-fin": {
+        "prefix": ["fin", "oi-fin", "oi-ifstream"],
+        "body": [
+            "ifstream ${1:fin}(\"${1:input.in}\");"
+        ],
+        "description": "fstream input file"
+    },
+    "oi-fout": {
+        "prefix": ["fout", "oi-fout", "oi-ofstream"],
+        "body": [
+            "ofstream ${1:fout}(\"${2:output.out}\");"
+        ],
+        "description": "fstream output file"
+    },
+    "oi-autolonglong":{
+        "prefix": ["oi-autolonglong", "oi-inttolonglong"],
+        "body": [
+            "#define int long long"
+        ],
+        "description": "reference int to long long"
+    },
+    "oi-dfs-matrix":{
+        "prefix": ["dfs", "oi-dfs", "oi-dfs-matrix", "oi-dfs-matrix-template"],
+        "body": [
+            "const int _dx[] = {0, 0, 1, -1};",
+            "const int _dy[] = {1, -1, 0, 0};",
+            "bool _vis[${1:m}][${2:n}]",
+            "void dfs(int _x, int _y, int _deep, int& _ans){",
+            "\tif(${3:_check(_x,_y)}){",
+            "\t\t${4};",
+            "\t\treturn;",
+            "\t}",
+            "\tfor(int _i = 0; _i < 4; _i++){",
+            "\t\tint _nx = _x + _dx[_i];",
+            "\t\tint _ny = _y + _dy[_i];",
+            "\t\tif(!${5:_isvaild(_x,_y)}) continue;",
+            "\t\t_vis[_nx][_ny] = true;",
+            "\t\tdfs(_nx, _ny, _deep + 1,_ans);",
+            "\t\t_vis[_nx][_ny] = false",
+            "\t}",
+            "}"
+        ],
+        "description": "dfs template on matrix"
+    }
+}

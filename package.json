@@ -1,0 +1,24 @@
+{
+  "name": "oifastsnippets",
+  "displayName": "OIFastSnippets",
+  "description": "Fast to write code for OI Problem with templates.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python-snippets.code-snippets"
+      }
+    ]
+  }
+}
