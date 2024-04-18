@@ -13,5 +13,20 @@
             "${1:list}.sort()"
         ],
         "description": "sort a list"
+    },
+    "oi-sort-reverse":{
+        "prefix": ["sort-reverse", "oi-sort-reverse"],
+        "body": [
+            "${1:list}.sort(reverse=True)"
+        ],
+        "description": "sort a list in reverse order"
+    },
+    "oi-unique":{
+        "prefix": ["unique", "oi-unique"],
+        "body": [
+            "_sp = set(${1:lst})",
+            "${1:lst} = sorted(list(_sp), key=${1:lst}.index)"
+        ],
+        "description": "remove duplicate elements in a list"
     }
 }
