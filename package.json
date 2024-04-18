@@ -2,6 +2,7 @@
   "name": "oifastsnippets",
   "displayName": "OIFastSnippets",
   "description": "Fast to write code for OI Problem with templates.",
+  "publisher": "10chen01",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.88.0"
