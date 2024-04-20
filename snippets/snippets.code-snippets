@@ -5,7 +5,7 @@
             "#include <${1:bits/stdc++.h}>",
             "using namespace std;",
             "${2|int,signed|} main(){",
-            "\t$3",
+            "\t$0",
             "\treturn 0;",
             "}"
         ],
@@ -214,7 +214,8 @@
             "\t}",
             "};"
         ],
-        "description": "BinaryTree with point implementation."
+        "description": "BinaryTree with point implementation.",
+        "isFileTemplate": true
     },
     "oi-ds-list-with-pointer" : {
         "prefix": ["oi-list", "list-with-pointer", "oi-list-with-pointer"],
@@ -316,7 +317,8 @@
             "\t}",
             "};"
         ],
-        "description": "List with pointer implementation."
+        "description": "List with pointer implementation.",
+        "isFileTemplate": true
     },
     "oi-ds-find-set": {
         "prefix" : ["find-set", "oi-find-set", "oi-ds-find-set"],
@@ -447,5 +449,85 @@
             "};"
         ],
         "description": "Datastructure of joint set.",
+        "isFileTemplate": true
+    },
+    "oi-functional-struct" : {
+        "prefix": ["functional-struct", "oi-functional-struct", "functor", "oi-functor"],
+        "body": [
+            "struct ${1:FunctionalStruct} {",
+            "\t${2:void} operator()($3) {",
+            "\t$0",
+            "\t}",
+            "} $4;"
+        ],
+        "description": "Functional struct.",
+    },
+    "oi-commonly-use-header" : {
+        "prefix" : ["oi-header", "oi-commonly-use-header"],
+        "body" : [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+        ]
+    },
+    "oi-commonly-use-header-without-bits-cpp" : {
+        "prefix": ["oi-header-msvc", "oi-header-llvm", "oi-header-w"],
+        "body": [
+            "#include <iostream>",
+            "#include <cstring>",
+            "#include <cctype>",
+            "#include <algorithm>",
+            "#include <vector>",
+            "#include <string>",
+            "#include <set>",
+            "#include <map>",
+            "#include <queue>",
+            "#include <stack>",
+            "#include <unordered_set>",
+            "#include <unordered_map>",
+            "#include <cmath>",
+            "#include <cstdio>",
+            "#include <functional>",
+            "#include <numeric>",
+            "#include <utility>",
+            "#include <limits>",
+            "#include <ctime>",
+            "#include <cmath>",
+            "#include <cstdio>",
+            "#include <string>",
+            "#include <cstdlib>",
+            "#include <cassert>",
+            "#include <regex>",
+            "using namespace std;"
+        ],
+        "isFileTemplate": true
+    },
+    "oi-for-loop" : {
+        "prefix": [
+            "oi-for", "for-loop", "for-with-count"
+        ],
+        "body": [
+            "for(int ${1:_count}=0;${1:_count}<${2:n};${1:_count}++){",
+            "\t$0",
+            "}"
+        ],
+        "description": "for loop with count."
+    },
+    "oi-for-each" : {
+        "prefix": ["foreach", "for-each", "for-item"],
+        "body": [
+            "for(auto ${1:item}: ${2:container}){",
+            "\t$0",
+            "}"
+        ]
+    },
+    "oi-for-each-with-index" : {
+        "prefix": ["foreach-with-index", "for-each-with-index", "for-item-with-index"],
+        "body": [
+            "for(int ${1:_index}=0;${1:_index}<${2:container}.size();${1:_index}++){",
+            "\tauto ${3:item} = ${2:container}[${1:_index}];",
+            "\t$0",
+            "}"
+        ]
     }
 }
