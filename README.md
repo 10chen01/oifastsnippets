@@ -33,3 +33,7 @@ We added some useful snippets about standard and essential OI operations,
 such as `BinaryTree`, `FindSet`, `List` and so on data structure.
 
 We also added some snippets to *python*, and we will write more snippets for more languages in the future.
+
+## 0.1.1
+
+Add some snippets for C++ and Python.
